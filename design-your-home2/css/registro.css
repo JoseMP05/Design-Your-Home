@@ -1,0 +1,530 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonts/Gilroy-FREE/Gilroy-ExtraBold.otf);
+}
+
+:root{
+    --principal-color: #BCC3ED;
+    --text-shadow: #e7e8f0;
+    --footer-color: #A59FD6;
+    --box-shadow: #9FB5D6; 
+    --shadow-inputs: #43738c;
+    --rojo-oscuro: #490000;
+    --btns-slide--hover: #4a65ff;
+    --btns-slide--click: #282e50;
+}
+body{
+    background-image: url(../assets/svg/fondo-forms.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 20fr ;
+    font-family: 'Quicksand', sans-serif;
+    color: #000000;
+}
+
+/* header */
+img{
+    color: #ffffff;
+}
+
+.header-nav{
+    background-color: var(--principal-color);
+}
+
+.navbar{
+    background-color: var(--principal-color);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo{
+    margin-top: 10px;
+}
+
+.logo-mobile__desabled{
+    display: none;
+}
+.container-navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.svg-element {
+    width: 40px;
+    position: relative;
+}
+
+.element-navbar4{
+    width: 54px;
+}
+.svg-element_link {        
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 50px;
+
+    font-family: 'Gilroy', 'Fredoka One', cursive;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.6rem;
+}
+
+
+.svg-element:nth-child(3) .svg-element_link{
+    height: 65px;
+}
+.form_registrarse{
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border: 1px solid var(--box-shadow);
+    box-shadow: 2px 2px 4px #44000079;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.title-form{
+    font-family: 'Gilroy', 'Fredoka One', cursive;
+    font-size: 2rem;
+    margin: 15px 0 0 0;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.container-questions{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    position: relative;
+    left: -3.5%;
+
+}
+
+/* ////////////////////////ESTILOS PARA EL SELECT DE FORMULARIO DE REGISTRO DEL CRUD//////////////////////////////*/
+.container-perfil{
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    position: relative;
+    top: -8px;
+}
+.container-perfil:hover{
+    box-shadow: 1px 1px 3px #43738c;
+}
+select{
+    width: 100%;
+    height: 100%;
+    border-color: transparent;
+    outline-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+select:hover{
+    outline-color: transparent;
+}
+
+select:focus{
+    outline-color: transparent;
+    border-radius: 5px;
+}   
+/* ////////////////////////===================//////////////////////////////*/
+input{
+    width: 100%;
+    height: 70%;
+    border: solid 1px transparent;
+    outline-color: transparent;
+    box-shadow: 1px 1px 2px var(--shadow-inputs);
+    border-radius: 5px;
+}
+
+input:hover{
+    box-shadow: 1px 1px 2px #132f3d;
+}
+
+input:focus{
+    outline: transparent;
+    border-radius: 5px;
+}
+
+.label-inputs{
+    position: relative;
+    border-top: 10px solid transparent;
+    margin-bottom: 5px;
+}
+
+.label-inputs input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 210px;
+    outline: none;
+    font-size: 14px;
+  }
+
+.label-inputs .placeholder-inputs {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+      top 0.3s ease,
+      color 0.3s ease,
+      font-size 0.3s ease;
+}
+
+.label-inputs input.dirty + .placeholder-inputs,
+.label-inputs input:focus + .placeholder-inputs,
+.label-inputs input:not(:placeholder-shown) + .placeholder-inputs {
+  top: -10px;
+  font-size: 10px;
+  color: #222;
+}
+/* ONE */
+.label-inputs.one input {
+    background: none;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+    height: 34px;
+  }
+  
+.input-email{
+    width: 200%;
+}
+  
+  .label-inputs.one input + .placeholder-inputs {
+    top: 65%;
+    left: 8px;
+    padding: 0px 5px 5px 0;
+  }
+  
+  .label-inputs.one input.dirty,
+  .label-inputs.one input:not(:placeholder-shown),
+  .label-inputs.one input:focus {
+    border-color: var(--shadow-inputs);
+    transition-delay: 0.1s
+  }
+  
+  .label-inputs.one input.dirty + .placeholder-inputs,
+  .label-inputs.one input:not(:placeholder-shown) + .placeholder-inputs,
+  .label-inputs.one input:focus + .placeholder-inputs {
+    top: 3px;
+    font-size: 10px;
+    color: #222;
+    background: #fff;
+    width: auto; 
+    padding-left: 2px;
+  }
+
+.container-nombre,
+.container-password_create{
+    width: 100%;
+    grid-column: 1 / 2;
+}
+    
+.container-apellido,
+.container-password_confirm{
+    width: 100%;
+    grid-column: 3 / 4;
+}
+
+.container_direccion,
+.container_cedula,
+.container_celular{
+    grid-column: 1 / 4;
+}
+
+.container_direccion{
+    grid-row: 2 / 3;
+}
+.container_cedula{
+    grid-row: 3 / 4;
+}
+.container_celular{
+    grid-row: 4 / 5;
+}
+.container-email_registro{
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+}
+
+.container-password_create,
+.container-password_confirm{
+    grid-row: 6 / 7;
+}
+.container-nombre,
+.container-apellido,
+.container_direccion,
+.container_cedula,
+.container_celular,
+.container-email_registro,
+.container-password_create,
+.container-password_confirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* padding especifico a los elementos ubicados a la izquierda del formualrio para darle una mejor ubicacion */
+.container-nombre,
+.container-password_create{
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+/* padding especifico a los elementos ubicados a la derecha del formualrio para darle una mejor ubicacion */
+.container-apellido,
+.container-password_confirm{
+    padding-left: 5px;
+    padding-right: 0px;
+
+}
+/* diseño del input para ingresar el email */
+.container-email_registro, .container-email_registro .label-inputs,
+.label-inputs .input-email,
+.container_direccion, .container_direccion .label-inputs, .label-inputs .input-direccion,
+.container_cedula, .container_cedula .label-inputs, .label-inputs .input-cedula,
+.container_celular, .container_celular .label-inputs, .label-inputs .input-celular 
+{
+    width: 100%;
+}
+ 
+.container-button{
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: #9FADDA;
+    width: 115px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        background-size: auto;
+        background-position: center top;
+    }
+    .container-logo{
+        display: none;
+    }
+
+    .logo-mobile__active{
+        display: inline-block;
+        position: absolute;
+        top: 2%;
+        left: 3%; 
+        z-index: 200;
+    }
+
+    
+    .navbar__desabled{
+         display: none;
+    }
+    
+    .navbar__active{
+        display: grid;
+    }
+    .navbar{
+        width: 75%;
+        height: 100%;
+        background-color:var(--principal-color);
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        /* visibility: hidden; */
+    }
+
+    .svg_element_img{
+        width: 26px;
+    }
+    .svg-element_link {        
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.2rem;
+        transform: translateX(-40%);
+    }
+
+    .svg-element:nth-child(1) .svg-element_link{
+        width: 100px;
+    }
+    .svg-element:nth-child(1) .svg-element_link img{
+        align-items: flex-end;
+        transform: translateY(calc(-25% + 5px));
+    }
+    .svg-element:nth-child(2) .svg-element_link{
+        width: 150px;
+    }
+    .svg-element:nth-child(3) .svg-element_link{
+        width: 190px;
+    }
+    .svg-element:nth-child(4) .svg-element_link{
+        width: 260px;
+    }
+    /*formulario*/
+    .form_registrarse{
+        /* transform: scale(0.8); */
+        transform: scale(0.8);
+        left: calc(50%-600px);
+
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .form_registrarse{
+        height: 600px;
+        width: 350px;
+        top: calc(50% - 300px);
+        left: calc(50% - 175px);
+    }
+    .container-questions{
+        grid-template-rows: repeat(8, 1fr);
+        left: 0;
+        /* background-color: #43738c; */
+        overflow: scroll;
+        /* height: 300px; */
+    }
+    .container-questions div, .container-questions div .label-inputs,
+    .label-inputs input
+    {
+        width: 100%;
+        padding: 0;
+    }
+ 
+    .container-nombre{
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        width: 500px;
+    }
+
+    .container-apellido{
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .container_direccion{
+        grid-row: 3 / 4;
+    }
+
+    .container_celular{
+        grid-row: 4 / 5;
+    }
+
+    .container_cedula{
+        grid-row: 5 / 6;
+    }
+    .container-email_registro{
+        grid-column: 1 / 4;
+        grid-row: 6 / 7;
+    }
+
+    .container-password_create{
+        grid-column: 1 / 4;
+        grid-row: 7 / 8;
+    }
+    .container-password_confirm{
+        grid-column: 1 / 4;
+        grid-row:  8 / 9;
+    }
+    
+    /* div .label-inputs input {
+        width: 100%;
+    }
+
+    .label-inputs{
+        width: 82%
+    }
+    .container-questions div{
+        width: 100%;
+    } */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

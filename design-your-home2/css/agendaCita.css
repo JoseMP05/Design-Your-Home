@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonts/Gilroy-FREE/Gilroy-ExtraBold.otf);
+}
+
+:root{
+    --principal-color: #BCC3ED;
+    --text-shadow: #e7e8f0;
+    --footer-color: #A59FD6;
+    --box-shadow: #9FB5D6; 
+    --shadow-inputs: #43738c;
+    --rojo-oscuro: #490000;
+    --btns-slide--hover: #4a65ff;
+    --btns-slide--click: #282e50;
+}
+body{
+    background-image: url(../assets/svg/fondo-forms.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 20fr ;
+    font-family: 'Quicksand', sans-serif;
+    color: #000000;
+}
+
+/* header */
+img{
+    color: #ffffff;
+}
+
+.header-nav{
+    background-color: var(--principal-color);
+}
+
+.navbar{
+    background-color: var(--principal-color);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo{
+    margin-top: 10px;
+}
+
+.logo-mobile__desabled{
+    display: none;
+}
+.container-navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+}
+
+    .svg-element {
+        width: 40px;
+        position: relative;
+    }
+
+    .element-navbar4{
+        width: 54px;
+    }
+    .svg-element_link {        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        height: 50px;
+    
+        font-family: 'Gilroy', 'Fredoka One', cursive;
+        color: #000;
+        text-decoration: none;
+        font-size: 0.6rem;
+    }
+    
+    
+    .svg-element:nth-child(3) .svg-element_link{
+        height: 65px;
+    }
+
+.form_agendaCita{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    top: calc(50% - 175px);
+    left: calc(50% - 225px);
+
+    width:500px;
+    height: 350px;
+    border: 1px solid var(--box-shadow);
+    box-shadow: 2px 2px 4px #44000079;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+
+}
+
+.contenedor-main{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_agendaCita h2{
+    font-family: 'Gilroy', 'Fredoka One', cursive;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+input{
+    width: 100%;
+    height: 70%;
+    border: solid 1px transparent;
+    outline-color: transparent;
+    box-shadow: 1px 1px 2px var(--shadow-inputs);
+    border-radius: 5px;
+}
+
+input:hover{
+    box-shadow: 1px 1px 2px #132f3d;
+}
+
+input:focus{
+    outline: transparent;
+    border-radius: 5px;
+}
+
+.label-inputs{
+    position: relative;
+    border-top: 10px solid transparent;
+    margin-bottom: 5px;
+}
+
+.label-inputs input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 210px;
+    outline: none;
+    font-size: 14px;
+    }
+
+.label-inputs .placeholder-inputs {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    line-height: 100%;
+    transform: translate(18%, -50%);
+    color: #aaa;
+    transition: 
+        top 0.3s ease,
+        color 0.3s ease,
+        font-size 0.3s ease;
+}
+
+.label-inputs input.dirty + .placeholder-inputs,
+.label-inputs input:focus + .placeholder-inputs,
+.label-inputs input:not(:placeholder-shown) + .placeholder-inputs {
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+}
+/* ONE */
+.label-inputs.one input {
+    background: none;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+    height: 34px;
+    }
+
+    .label-inputs.one input + .placeholder-inputs {
+    top: 65%;
+    left: 10px;
+    padding: 0px 0px 5px 0px;
+    }
+    
+    .label-inputs.one input.dirty,
+    .label-inputs.one input:not(:placeholder-shown),
+    .label-inputs.one input:focus {
+    border-color: var(--shadow-inputs);
+    transition-delay: 0.1s
+    }
+    
+    .label-inputs.one input.dirty + .placeholder-inputs,
+    .label-inputs.one input:not(:placeholder-shown) + .placeholder-inputs,
+    .label-inputs.one input:focus + .placeholder-inputs {
+    top: 3px;
+    font-size: 10px;
+    color: #222;
+    background: #fff;
+    width: auto; 
+    padding-left: 2px;
+    }
+
+
+.container-email_agendaCita,
+.container-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-inputs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.label-inputs .input-email,
+.label-inputs .input-password  {
+    width: 90%;
+}
+
+textarea {
+    resize: none;
+}
+
+button{
+    background-color: #9FADDA;
+    width: 100px;
+    height: 35px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* media querys*/
+@media screen and (max-width: 800px) {
+    body{
+        background-size: auto;
+        background-position: center top;
+    }
+    .container-logo{
+        display: none;
+    }
+
+    .logo-mobile__active{
+        display: inline-block;
+        position: absolute;
+        top: 2%;
+        left: 3%; 
+        z-index: 200;
+    }
+
+    
+    .navbar__desabled{
+         display: none;
+    }
+    
+    .navbar__active{
+        display: grid;
+    }
+    .navbar{
+        width: 75%;
+        height: 100%;
+        background-color:var(--principal-color);
+        grid-template-rows: 1fr;
+        justify-content: center;
+    }
+
+    .svg_element_img{
+        width: 26px;
+    }
+    .svg-element_link {        
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.2rem;
+        transform: translateX(-40%);
+    }
+
+    .svg-element:nth-child(1) .svg-element_link{
+        width: 100px;
+    }
+    .svg-element:nth-child(1) .svg-element_link img{
+        align-items: flex-end;
+        transform: translateY(calc(-25% + 5px));
+    }
+    .svg-element:nth-child(2) .svg-element_link{
+        width: 150px;
+    }
+    .svg-element:nth-child(3) .svg-element_link{
+        width: 190px;
+    }
+    .svg-element:nth-child(4) .svg-element_link{
+        width: 260px;
+    }
+    /*formulario*/
+    .form_agendaCita{
+        width: 300px;
+        left: calc(50% - 150px);
+        height: 400px;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+}

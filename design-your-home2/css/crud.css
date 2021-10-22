@@ -1,0 +1,53 @@
+body{
+   text-align: center;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px #c2c2c281;
+    height: 12vh;
+    margin-bottom: 20px;
+}
+
+nav form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1vw;
+    margin-right: 2vw;
+}
+.btns{
+    margin-left: 2vw;
+}
+
+.añadir{
+    margin-right: 0.5vw;
+}
+.buscador .field{
+    margin-bottom: 0;
+}
+
+.icon--edit i, 
+.icon--delete i,
+.icon--cita i{
+    font-size: 1.5em;
+}
+
+.icon--edit:hover i{
+    color: #88b370;
+}
+
+.icon--delete:hover i{
+    color:  #f00;
+}
+
+.icon--cita:hover{
+    color: #a3a3a3;
+}
+
+a{
+    color: #000;
+}
